@@ -16,6 +16,7 @@ class CreateStatisticsTable extends Migration
         Schema::create('statistics', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
+            $table->integer('match_id')->unsigned()->index();
             $table->string('type')->default('batting'); // Can also be bowling
 
             // Batting
@@ -37,6 +38,7 @@ class CreateStatisticsTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('match_id')->references('id')->on('matches')->onDelete('cascade');
         });
     }
 

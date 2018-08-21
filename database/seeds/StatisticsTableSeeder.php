@@ -12,7 +12,16 @@ class StatisticsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Statistic::class, 25)->states('batting')->create();
-        factory(Statistic::class, 25)->states('bowling')->create();
+        $matchId = 1;
+
+        factory(Statistic::class, 25)->states('batting')->create([
+            'match_id' => $matchId
+        ]);
+
+        factory(Statistic::class, 25)->states('bowling')->create([
+            'match_id' => $matchId
+        ]);
+
+        $matchId += 1;
     }
 }

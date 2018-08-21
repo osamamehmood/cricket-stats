@@ -6,6 +6,7 @@ use Faker\Generator as Faker;
 $factory->define(Statistic::class, function (Faker $faker) {
     return [
         'user_id' => 1,
+        'match_id' => 1
     ];
 });
 

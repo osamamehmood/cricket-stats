@@ -15,7 +15,7 @@ class CreateMatchesTable extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('grade_id')->unsigned()->index();
+            $table->integer('round_id')->unsigned()->index();
             $table->string('venue');
             $table->date('played_at');
             $table->integer('round');
