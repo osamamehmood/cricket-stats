@@ -11,11 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/home', 'dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-Route::get('/about', 'HomeController@about')->name('about');
+Route::get('dashboard', 'UserController@index')->middleware('auth')->name('dashboard');
