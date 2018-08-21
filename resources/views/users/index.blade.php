@@ -16,6 +16,7 @@
                                 <th scope="col">Balls Faced</th>
                                 <th scope="col">4s</th>
                                 <th scope="col">6s</th>
+                                <th scope="col">SR</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,6 +26,7 @@
                                 <th>{{ $batting->number_of_bowls_faced }}</th>
                                 <th>{{ $batting->number_of_4s }}</th>
                                 <th>{{ $batting->number_of_6s }}</th>
+                                <th>{{ $batting->batting_strike_rate }}</th>
                             </tr>
                             @endforeach
                         </tbody>
