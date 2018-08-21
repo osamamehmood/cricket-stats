@@ -18,7 +18,6 @@ class CreateMatchesTable extends Migration
             $table->integer('round_id')->unsigned()->index();
             $table->string('venue');
             $table->date('played_at');
-            $table->integer('round');
             $table->text('notes')->nullable();
             $table->timestamps();
         });

@@ -12,8 +12,6 @@ class MatchesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Match::class)->create([
-            'round_id' => 1
-        ]);
+        factory(Match::class, 10)->create();
     }
 }
