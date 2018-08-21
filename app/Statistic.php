@@ -27,4 +27,10 @@ class Statistic extends Model
     {
         return $builder->where('type', 'bowling');
     }
+
+    public function getBattingStrikeRateAttribute() {
+        $strikeRate = ($this->number_of_runs / $this->number_of_bowls_faced) * 100;
+
+        return number_format($strikeRate, 2);
+    }
 }

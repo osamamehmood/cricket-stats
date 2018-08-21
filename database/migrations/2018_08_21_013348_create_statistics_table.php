@@ -24,7 +24,6 @@ class CreateStatisticsTable extends Migration
             $table->integer('number_of_bowls_faced')->nullable();
             $table->integer('number_of_4s')->nullable();
             $table->integer('number_of_6s')->nullable();
-            // $table->double('strike_rate'); // Calculation: runs / bowls_faced * 100
 
             // Bowling
             $table->integer('overs_bowled')->nullable();
