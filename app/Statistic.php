@@ -33,4 +33,17 @@ class Statistic extends Model
 
         return number_format($strikeRate, 2);
     }
+
+    public function getNumberOfBallsBowledAttribute() {
+        $balls = explode ('.', $this->overs_bowled);
+        $totalBallsBowled = ((int)$balls[0] * 6) + (int)(isset($balls[1]) ?? 0);
+
+        return $totalBallsBowled;
+    }
+
+    public function getBowlingStrikeRateAttribute() {
+        $strikeRate = ($this->numberOfBallsBowled / ($this->wickets_taken > 0 ? $this->wickets_taken : 1));
+
+        return number_format($strikeRate, 2);
+    }
 }
