@@ -13,6 +13,11 @@ class Statistic extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function match()
+    {
+        return $this->belongsTo(Match::class);
+    }
+
     public function scopeBatting($builder)
     {
         return $builder->where('type', 'batting');
