@@ -28,7 +28,7 @@ class CreateStatisticsTable extends Migration
             $table->integer('maiden_overs');
             $table->integer('runs_conceded');
             $table->integer('wickets_taken');
-            $table->integer('economy');
+            $table->double('economy');
             $table->integer('wides_bowled');
             $table->integer('no_balls_bowled');
 
