@@ -12,7 +12,7 @@ class StatisticsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Statistic::class, 1)->states('batting')->create();
-        factory(Statistic::class, 1)->states('bowling')->create();
+        factory(Statistic::class, 25)->states('batting')->create();
+        factory(Statistic::class, 25)->states('bowling')->create();
     }
 }
