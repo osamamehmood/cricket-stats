@@ -15,6 +15,7 @@ class CreateStatisticsTable extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
             $table->string('type')->default('batting'); // Can also be bowling
             // Batting
             $table->integer('number_of_runs');
