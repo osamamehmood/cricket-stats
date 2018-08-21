@@ -15,6 +15,9 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('location');
+            // Club president - can by anyone, does not have to be the cap
             $table->timestamps();
         });
     }
