@@ -47,14 +47,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(auth()->user()->statistics()->Bowling()->get() as $bowling)
+                            @foreach(auth()->user()->statistics()->bowling()->get() as $bowling)
                             <tr>
-                                <th>{{ $batting->overs_bowled }}</th>
-                                <th>{{ $batting->maiden_overs }}</th>
-                                <th>{{ $batting->runs_conceded }}</th>
-                                <th>{{ $batting->wickets_taken }}</th>
-                                <th>{{ $batting->wides_bowled }}</th>
-                                <th>{{ $batting->no_balls_bowled }}</th>
+                                <th>{{ $bowling->overs_bowled }}</th>
+                                <th>{{ $bowling->maiden_overs }}</th>
+                                <th>{{ $bowling->runs_conceded }}</th>
+                                <th>{{ $bowling->wickets_taken }}</th>
+                                <th>{{ $bowling->wides_bowled }}</th>
+                                <th>{{ $bowling->no_balls_bowled }}</th>
                             </tr>
                             @endforeach
                         </tbody>
