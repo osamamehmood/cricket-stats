@@ -46,6 +46,7 @@
                                 <th scope="col">Wickets</th>
                                 <th scope="col">Wides</th>
                                 <th scope="col">No Balls</th>
+                                <th scope="col">Bowling SR</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,6 +58,7 @@
                                 <th>{{ $bowling->wickets_taken }}</th>
                                 <th>{{ $bowling->wides_bowled }}</th>
                                 <th>{{ $bowling->no_balls_bowled }}</th>
+                                <th>{{ $bowling->bowling_strike_rate }}</th>
                             </tr>
                             @endforeach
                         </tbody>
