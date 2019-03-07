@@ -16,7 +16,7 @@ class UserController extends Controller
                     return $statistics->number_of_runs;
                 }),
 
-            'number_of_matches' =>
+            // 'number_of_matches' =>
         ];
 
         return view('users.index', compact('graph'));
